@@ -1,5 +1,3 @@
-require 'pry'
-
 class Darts
     def initialize(x, y)
         @distance_from_center = Math.sqrt(x**2 + y**2)
