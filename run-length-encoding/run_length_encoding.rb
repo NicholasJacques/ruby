@@ -1,6 +1,6 @@
 module RunLengthEncoding
     def self.encode(input)
-        result = []
+        result = ''
         char_count = 0
         input.each_char.with_index do |char, i|
             if input[i+1] != char
@@ -15,13 +15,13 @@ module RunLengthEncoding
                 char_count += 1
             end
         end
-        result.join
+        result
     end
 
     def self.decode(input)
-        result = []
+        result = ''
         current_count = ''
-        input.each_char.with_index do |char, i|
+        input.each_char do |char|
             if char.match?(/[[:digit:]]/)
                 current_count += char
             else
@@ -33,6 +33,6 @@ module RunLengthEncoding
                 end
             end
         end
-        result.join
+        result
     end
 end
