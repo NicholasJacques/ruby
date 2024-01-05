@@ -2,8 +2,6 @@ class Integer
   ROMAN_NUMERAL_SYMBOLS = %w(I V X L C D M)
 
   def to_roman
-    # return ROMAN_NUMERALS[self] if ROMAN_NUMERALS[self]
-
     result = []
     current_magnitude = 0
     self.digits.each do |digit|
